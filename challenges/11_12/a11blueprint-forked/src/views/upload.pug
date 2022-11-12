@@ -1,0 +1,12 @@
+extends index.pug
+include mixins/movie
+
+block content
+
+  form(method="POST")
+    input(name="title", placeholder="Title", type="text", required="true")
+    input(name="summary", placeholder="Summary", type="text", required="true")
+    input(name="year", placeholder="Year", type="number", required="true")
+    input(name="rating", placeholder="Rating", type="number", required="true")
+    input(name="genres", placeholder="Genres", type="text")
+    input(type="submit", value="Add Movie")

@@ -1,0 +1,11 @@
+extends templates/layout
+include mixins/movie
+
+block content
+  h1=pageTitle
+
+  form(method="POST")
+    input(name="title", placeholder="Title", type="text")
+    textarea(name="synopsis", placeholder="Synopsis")
+    input(name="genres", placeholder="Genres", type="text")
+    input(type="submit", value="Add Movie")

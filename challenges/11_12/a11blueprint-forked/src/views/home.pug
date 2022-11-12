@@ -1,0 +1,8 @@
+extends index.pug
+include mixins/movie
+
+block content
+  each movie in movies
+    +movieMixin(movie)
+  else
+    li Sorry Nothing Found

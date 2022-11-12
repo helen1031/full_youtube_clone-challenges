@@ -1,0 +1,6 @@
+extends index
+
+block content
+  h4= movie.summary
+  each genre in movie.genres
+    li= genre

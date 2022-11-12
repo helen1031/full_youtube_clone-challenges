@@ -1,0 +1,12 @@
+extends index.pug
+include mixins/movie
+
+block content
+  form(method="GET")
+    input(placeholder="Search by title", name="title", type="String")
+    input(type="submit", value="Search")
+
+  each movie in movies
+    +movieMixin(movie)
+  else
+    li Nothing Found

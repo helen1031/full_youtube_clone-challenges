@@ -1,0 +1,16 @@
+extends index.pug
+
+block content
+  h4= "Title: " + movie.title
+  h4= "Summary: " + movie.summary
+  h4= "Year: " + movie.year
+  h4= "Rating: " + movie.rating
+  h4=" Genres:"
+  each genre in movie.genres
+    li= genre
+  nav
+    ul 
+      li 
+        a(href=`/movies/${movie.id}/edit`) Edit
+      li 
+        a(href=`/movies/${movie.id}/delete`) Delete

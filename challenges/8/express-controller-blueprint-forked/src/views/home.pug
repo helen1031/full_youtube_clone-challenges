@@ -1,0 +1,15 @@
+extends index.pug
+include movie
+
+block content
+  form(method="GET", action="filter")
+    input(placeholder="Filter by year", name="year", type="String")
+    input(placeholder="Filter by rating", name="rating", type="String")
+    input(type="submit", value="Search")
+
+  p
+  each m in movies
+    +movie(m)
+
+  else
+    li Sorry Nothing Found
